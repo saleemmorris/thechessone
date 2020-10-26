@@ -1,0 +1,62 @@
+html,
+body {
+  background-color: $page-bkg-color;
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+  .main {
+  }
+  $grid-sides: 15vw;
+  .l-spacer {
+  }
+
+  .r-spacer {
+  }
+
+  .header {
+    .container {
+      .header-left {
+      }
+      .header-center {
+        a:hover,
+        a:visited,
+        a:link,
+        a:active {
+          color: black;
+          text-decoration: none;
+        }
+
+        .logo-inner {
+          text-align: center;
+          border-bottom: 1px solid #000000;
+          .logo-the {
+            font-family: $logoThe;
+            font-size: 1rem;
+          }
+          .logo-chess {
+            font-family: $logoChess;
+            font-size: 2.4rem;
+            text-decoration: none;
+          }
+          .logo-horse {
+            font-family: $logoO;
+            font-weight: 600;
+            font-size: 3.7rem;
+          }
+          .logo-ne {
+            font-family: $logoThe;
+            font-weight: 400;
+            font-size: 2.4rem;
+          }
+        }
+      }
+      .header-right {
+      }
+      .header-right > button {
+      }
+    }
+  }
+
+  .page {
+  }
+}

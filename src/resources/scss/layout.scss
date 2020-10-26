@@ -1,0 +1,64 @@
+@media only screen and (min-width: $breakpoint-desktop) {
+  $grid-sides: 15vw;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: $grid-sides auto $grid-sides;
+    grid-template-rows: 150px calc(96vh - 150px) min-content;
+    margin-top: 0;
+  }
+
+  .l-spacer {
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 1;
+  }
+
+  .r-spacer {
+    grid-row: 2 / span 2;
+    grid-column: 3 / span 1;
+  }
+
+  .header {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    .container {
+      display: grid;
+      grid-template-columns: $grid-sides 20vw $grid-sides;
+      justify-content: space-between;
+      .header-left {
+        grid-column: 1 / span 1;
+      }
+      .header-center {
+        grid-column: 2 / span 1;
+        height: 150px;
+        padding: 5px;
+        .logo-inner {
+        }
+      }
+      .header-right {
+        grid-column: 3 / span 1;
+        margin-right: 0px;
+      }
+      .header-right > button {
+        float: right;
+      }
+    }
+  }
+
+  .page {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+}
