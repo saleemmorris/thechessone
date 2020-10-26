@@ -4,19 +4,10 @@ body {
 }
 
 @media only screen and (min-width: $breakpoint-desktop) {
-  .main {
-  }
   $grid-sides: 15vw;
-  .l-spacer {
-  }
-
-  .r-spacer {
-  }
 
   .header {
     .container {
-      .header-left {
-      }
       .header-center {
         a:hover,
         a:visited,
@@ -50,13 +41,6 @@ body {
           }
         }
       }
-      .header-right {
-      }
-      .header-right > button {
-      }
     }
-  }
-
-  .page {
   }
 }
