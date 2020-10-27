@@ -19,21 +19,22 @@ h6 {
 
   .logo-the {
     font-family: $logoThe;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   .logo-chess {
     font-family: $logoChess;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 4.2rem;
     text-decoration: none;
   }
   .logo-horse {
     font-family: $logo1;
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 4.6rem;
   }
 
   .header {
+    background-color: #fff;
     .container {
       .header-center {
         a:hover,
@@ -46,6 +47,42 @@ h6 {
 
         .logo-inner {
           text-align: center;
+        }
+      }
+      .header-right .button-blue,
+      .header-right .button-red {
+        position: relative;
+        color: #4e4e4e;
+        padding: 0;
+        border: 4px solid #888888;
+        border-top: none;
+        outline: none;
+        background-color: #f4f5f6;
+        border-radius: 40px;
+        box-shadow: -6px -20px 35px #ffffff, -6px -10px 15px #ffffff,
+          -20px 0px 30px #ffffff, 6px 20px 25px rgba(0, 0, 0, 0.2);
+        transition: 0.13s ease-in-out;
+        cursor: pointer;
+        &:active {
+          box-shadow: none;
+          .button__content {
+            box-shadow: none;
+            .button__text,
+            .button__icon {
+              transform: translate3d(0px, 0px, 0px);
+            }
+          }
+        }
+        &:hover {
+          box-shadow: none;
+          border: 4px solid #4e4e4e;
+          .button__content {
+            box-shadow: none;
+            .button__text,
+            .button__icon {
+              transform: translate3d(0px, 0px, 0px);
+            }
+          }
         }
       }
     }

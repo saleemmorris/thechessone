@@ -42,12 +42,14 @@ const Header: FC = () => {
         {!authenticated ? (
           <div className='header-right'>
             <Button
+              className='button-red'
               text='Signup'
               onClick={() => {
                 history.push("/signup");
               }}
             />
             <Button
+              className='button-blue'
               text='Signin'
               onClick={() => {
                 history.push("/signin");
