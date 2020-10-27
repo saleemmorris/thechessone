@@ -1,10 +1,37 @@
 html,
 body {
   background-color: $page-bkg-color;
+  font-family: $main-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $main-font;
+  font-weight: 500;
 }
 
 @media only screen and (min-width: $breakpoint-desktop) {
   $grid-sides: 15vw;
+
+  .logo-the {
+    font-family: $logoThe;
+    font-size: 1rem;
+  }
+  .logo-chess {
+    font-family: $logoChess;
+    font-weight: 400;
+    font-size: 3rem;
+    text-decoration: none;
+  }
+  .logo-horse {
+    font-family: $logo1;
+    font-weight: 400;
+    font-size: 3rem;
+  }
 
   .header {
     .container {
@@ -20,25 +47,6 @@ body {
         .logo-inner {
           text-align: center;
           border-bottom: 1px solid #000000;
-          .logo-the {
-            font-family: $logoThe;
-            font-size: 1rem;
-          }
-          .logo-chess {
-            font-family: $logoChess;
-            font-size: 2.4rem;
-            text-decoration: none;
-          }
-          .logo-horse {
-            font-family: $logoO;
-            font-weight: 600;
-            font-size: 3.7rem;
-          }
-          .logo-ne {
-            font-family: $logoThe;
-            font-weight: 400;
-            font-size: 2.4rem;
-          }
         }
       }
     }

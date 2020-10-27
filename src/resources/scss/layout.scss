@@ -3,6 +3,8 @@
 
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   html,
@@ -39,6 +41,10 @@
       justify-content: space-between;
       .header-left {
         grid-column: 1 / span 1;
+        img {
+          width: 100px;
+          height: 100px;
+        }
       }
       .header-center {
         grid-column: 2 / span 1;

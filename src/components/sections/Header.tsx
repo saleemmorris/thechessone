@@ -22,8 +22,6 @@ const Header: FC = () => {
           <Link to='#'>
             <img
               src={`${process.env.PUBLIC_URL}images/svg/ui/menu-btn.svg`}
-              width='50'
-              height='50'
               alt='Menu'
             />
           </Link>
@@ -32,9 +30,8 @@ const Header: FC = () => {
           <Link to={!authenticated ? "/" : "/dashboard"}>
             <div className='logo-inner'>
               <span className='logo-the'>the </span>
-              <span className='logo-chess'>Chess </span>
-              <span className='logo-horse'>O</span>
-              <span className='logo-ne'>ne</span>
+              <span className='logo-chess'>Chess</span>
+              <span className='logo-horse'>1</span>
             </div>
           </Link>
         </div>
