@@ -19,12 +19,16 @@ const Header: FC = () => {
     <div className='header'>
       <div className='container'>
         <div className='header-left'>
-          <Link to='#'>
-            <img
-              src={`${process.env.PUBLIC_URL}images/svg/ui/menu-btn.svg`}
-              alt='Menu'
-            />
-          </Link>
+          {!authenticated ? (
+            ""
+          ) : (
+            <Link to='#'>
+              <img
+                src={`${process.env.PUBLIC_URL}images/svg/ui/menu-btn.svg`}
+                alt='Menu'
+              />
+            </Link>
+          )}
         </div>
         <div className='header-center'>
           <Link to={!authenticated ? "/" : "/dashboard"}>
