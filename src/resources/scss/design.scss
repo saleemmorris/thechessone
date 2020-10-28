@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: $page-bkg-color;
+  background-color: #fff;
   font-family: $main-font;
 }
 
@@ -12,6 +12,10 @@ h5,
 h6 {
   font-family: $main-font;
   font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media only screen and (min-width: $breakpoint-desktop) {
@@ -34,7 +38,7 @@ h6 {
   }
 
   .header {
-    background-color: #fff;
+    background-color: #fdfdfd;
     .container {
       .header-center {
         a:hover,
@@ -49,42 +53,40 @@ h6 {
           text-align: center;
         }
       }
-      .header-right .button-blue,
-      .header-right .button-red {
+      .header-right .header.btn {
         position: relative;
         color: #4e4e4e;
         padding: 0;
         border: 4px solid #888888;
         border-top: none;
         outline: none;
-        background-color: #f4f5f6;
-        border-radius: 40px;
+        background-color: #ffffff;
+        border-radius: 2px;
         box-shadow: -6px -20px 35px #ffffff, -6px -10px 15px #ffffff,
-          -20px 0px 30px #ffffff, 6px 20px 25px rgba(0, 0, 0, 0.2);
+          -20px 0px 30px #ffffff, 6px 20px 25px rgba(0, 0, 0, 0.274);
         transition: 0.13s ease-in-out;
         cursor: pointer;
         &:active {
           box-shadow: none;
-          .button__content {
-            box-shadow: none;
-            .button__text,
-            .button__icon {
-              transform: translate3d(0px, 0px, 0px);
-            }
-          }
         }
         &:hover {
           box-shadow: none;
           border: 4px solid #4e4e4e;
-          .button__content {
-            box-shadow: none;
-            .button__text,
-            .button__icon {
-              transform: translate3d(0px, 0px, 0px);
-            }
-          }
         }
       }
     }
+  }
+
+  .page {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: -12px 12px 12px rgb(75, 75, 75), -2px 2px 2px rgb(61, 61, 61);
+    .container {
+    }
+  }
+
+  .footer {
+    background-color: #cacaca;
+    text-align: center;
   }
 }

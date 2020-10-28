@@ -1,6 +1,7 @@
 import React, { FC, useState, FormEvent, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import "../../resources/scss/signup.scss";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
 import Message from "../ui/Message";
@@ -95,6 +96,36 @@ const Signup: FC = () => {
               disabled={loading}
             />
           </form>
+          <span className='separator'>
+            <img src='/images/ui/spacer.png' height='20' />
+          </span>
+          <div className='text-center'>or</div>
+          <div className='center'>
+            <span className='separator'>
+              <img src='/images/ui/spacer.png' height='20' />
+            </span>
+            <p>
+              <img
+                src='/images/ui/btns/signup/apple-signup.png'
+                alt='Login with Apple'
+                height='60'
+              />
+            </p>
+            <p>
+              <img
+                src='/images/ui/btns/signup/facebook-signup.png'
+                alt='Login with Facebook'
+                height='60'
+              />
+            </p>
+            <p>
+              <img
+                src='/images/ui/btns/signup/google-signup.png'
+                alt='Login with Google'
+                height='60'
+              />
+            </p>
+          </div>
         </div>
       </div>
     </div>

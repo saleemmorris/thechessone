@@ -1,6 +1,7 @@
 import React, { FC, useState, FormEvent, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import "../../resources/scss/signin.scss";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
 import Message from "../ui/Message";
@@ -41,7 +42,7 @@ const SignIn: FC = () => {
     <div className='page'>
       <div className='signin-view'>
         <div className='container'>
-          <h2 className='has-text-centered is-size-2 mb-3'>Signin</h2>
+          <h2>Signin</h2>
           <form className='form' onSubmit={submitHandler}>
             {error && <Message type='danger' msg={error} />}
             <Input
@@ -60,15 +61,45 @@ const SignIn: FC = () => {
               placeholder='Password'
               label='Password'
             />
-            <p>
-              <Link to='/forgot-password'>Forgotten Password</Link>
-            </p>
             <Button
               text={loading ? "Loading..." : "Signin"}
               className='is-primary is-fullwidth mt-5'
               disabled={loading}
             />
+            <p>
+              <Link to='/forgot-password'>Forgotten Password</Link>
+            </p>
           </form>
+          <span className='separator'>
+            <img src='/images/ui/spacer.png' height='20' />
+          </span>
+          <div className='text-center'>or</div>
+          <div className='center'>
+            <span className='separator'>
+              <img src='/images/ui/spacer.png' height='20' />
+            </span>
+            <p>
+              <img
+                src='/images/ui/btns/login/apple-login.png'
+                alt='Login with Apple'
+                height='60'
+              />
+            </p>
+            <p>
+              <img
+                src='/images/ui/btns/login/facebook-login.png'
+                alt='Login with Facebook'
+                height='60'
+              />
+            </p>
+            <p>
+              <img
+                src='/images/ui/btns/login/google-login.png'
+                alt='Login with Google'
+                height='60'
+              />
+            </p>
+          </div>
         </div>
       </div>
     </div>

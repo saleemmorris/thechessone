@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Switch } from "react-router-dom";
 
 import Header from "./components/sections/Header";
+import Footer from "./components/sections/Footer";
 import SignUp from "./components/pages/SignUp";
 import SignIn from "./components/pages/SignIn";
 import ForgotPassword from "./components/pages/ForgotPassword";
@@ -64,6 +65,7 @@ const App: FC = () => {
           <PrivateRoutes path='/dashboard' component={Dashboard} exact />
         </Switch>
         <div className='r-spacer'></div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

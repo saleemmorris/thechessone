@@ -15,10 +15,15 @@
     padding: 0;
   }
 
+  .center {
+    margin: 0 auto;
+    width: min-content;
+  }
+
   .main {
     display: grid;
     grid-template-columns: $grid-sides auto $grid-sides;
-    grid-template-rows: 150px calc(96vh - 150px) min-content;
+    grid-template-rows: min-content calc(96vh - 150px) min-content;
     margin-top: 0;
   }
 
@@ -48,7 +53,6 @@
       }
       .header-center {
         grid-column: 2 / span 1;
-        height: 150px;
         padding: 5px;
       }
       .header-right {
@@ -66,5 +70,17 @@
   .page {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+    .container {
+      padding: 2em;
+    }
+  }
+
+  .footer {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+    margin-top: 50px;
+    .container {
+      padding: 2em;
+    }
   }
 }

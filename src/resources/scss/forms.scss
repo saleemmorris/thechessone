@@ -1,10 +1,60 @@
-form > input[type="submit"],
-button {
-  height: 50px;
-  min-width: 120px;
-  border: 1px solid #424242;
-  outline: none;
-  background-color: #0a0a0a;
-  color: #ffffff;
-  cursor: pointer;
+@media only screen and (min-width: $breakpoint-desktop) {
+  form {
+    display: block;
+    width: min-content;
+    margin: 0 auto;
+    form input[type="submit"],
+    button {
+      margin: 6px 0;
+      height: 50px;
+      width: 100%;
+      border: 1px solid #424242;
+      outline: none;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    .control {
+      display: grid;
+      grid-template-columns: auto auto;
+      flex-direction: row;
+      label {
+        display: block;
+        width: 180px;
+        margin-top: 8px;
+        padding: 6px 0 6px 0;
+        color: #111111;
+        line-height: 34px;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="email"] {
+        display: block;
+        width: 200px;
+        height: 48px;
+        margin-top: 8px;
+        padding: 6px 0 6px 36px;
+        box-sizing: border-box;
+        background-color: #f1f1f1;
+        border-top: 1px solid #f2f2f2;
+        border-right: none;
+        border-left: none;
+        outline: none;
+        text-align: left;
+        line-height: 34px;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="date"]:focus,
+      input[type="email"]:focus {
+        background-color: #ffffff;
+      }
+    }
+  }
 }
