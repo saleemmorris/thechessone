@@ -96,14 +96,8 @@ const Signup: FC = () => {
               disabled={loading}
             />
           </form>
-          <span className='separator'>
-            <img src='/images/ui/spacer.png' height='20' />
-          </span>
-          <div className='text-center'>or</div>
+          <div className='text-center my-15'>or</div>
           <div className='center'>
-            <span className='separator'>
-              <img src='/images/ui/spacer.png' height='20' />
-            </span>
             <p>
               <img
                 src='/images/ui/btns/signup/apple-signup.png'

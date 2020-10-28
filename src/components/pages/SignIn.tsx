@@ -70,14 +70,8 @@ const SignIn: FC = () => {
               <Link to='/forgot-password'>Forgotten Password</Link>
             </p>
           </form>
-          <span className='separator'>
-            <img src='/images/ui/spacer.png' height='20' />
-          </span>
-          <div className='text-center'>or</div>
+          <div className='text-center my-15'>or</div>
           <div className='center'>
-            <span className='separator'>
-              <img src='/images/ui/spacer.png' height='20' />
-            </span>
             <p>
               <img
                 src='/images/ui/btns/login/apple-login.png'
