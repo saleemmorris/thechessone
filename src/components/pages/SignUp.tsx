@@ -5,7 +5,13 @@ import "../../resources/scss/signup.scss";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
 import Message from "../ui/Message";
-import { signup, setError } from "../../store/actions/authActions";
+import {
+  facebookSignup,
+  googleSignup,
+  signup,
+  setError
+  // twitterSignup
+} from "../../store/actions/authActions";
 import { RootState } from "../../store";
 
 const Signup: FC = () => {
@@ -42,6 +48,21 @@ const Signup: FC = () => {
       )
     );
   };
+
+  const authGoogleProviderSubmitHandler = (e: FormEvent) => {
+    e.preventDefault();
+    googleSignup();
+  };
+
+  const authFacebookProviderSubmitHandler = (e: FormEvent) => {
+    e.preventDefault();
+    facebookSignup();
+  };
+
+  // const authTwitterProviderSubmitHandler = (e: FormEvent) => {
+  //   e.preventDefault();
+  //   dispatch(twitterSignup());
+  // };
 
   return (
     <div className='page'>
@@ -99,26 +120,44 @@ const Signup: FC = () => {
           <div className='text-center my-15'>or</div>
           <div className='center'>
             <p>
-              <img
-                src='/images/ui/btns/signup/apple-signup.png'
-                alt='Login with Apple'
-                height='60'
-              />
+              <form
+                className='form'
+                onSubmit={authFacebookProviderSubmitHandler}
+              >
+                <button className='auth-provider' type='submit'>
+                  <img
+                    src='/images/ui/btns/signup/facebook-signup.png'
+                    alt='Login with Facebook'
+                    height='60'
+                  />
+                </button>
+              </form>
             </p>
             <p>
-              <img
-                src='/images/ui/btns/signup/facebook-signup.png'
-                alt='Login with Facebook'
-                height='60'
-              />
+              <form className='form' onSubmit={authGoogleProviderSubmitHandler}>
+                <button className='auth-provider' type='submit'>
+                  <img
+                    src='/images/ui/btns/signup/google-signup.png'
+                    alt='Login with Google'
+                    height='60'
+                  />
+                </button>
+              </form>
             </p>
-            <p>
-              <img
-                src='/images/ui/btns/signup/google-signup.png'
-                alt='Login with Google'
-                height='60'
-              />
-            </p>
+            {/* <p>
+              <form
+                className='form'
+                onSubmit={authTwitterProviderSubmitHandler}
+              >
+                <button className='auth-provider' type='submit'>
+                  <img
+                    src='/images/ui/btns/signup/twitter-signup.png'
+                    alt='Login with Twitter'
+                    height='60'
+                  />
+                </button>
+              </form>
+            </p> */}
           </div>
         </div>
       </div>

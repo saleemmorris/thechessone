@@ -58,6 +58,50 @@ export const signup = (
   };
 };
 
+// export const twitterSignup = (
+//   onError: () => void
+// ): ThunkAction<void, RootState, null, AuthAction> => {
+//   return async (dispatch) => {
+//     try {
+//     } catch (error) {}
+//   };
+//   //const provider = new firebase.auth.GoogleAuthProvider();
+// };
+
+export const facebookSignup = () => {
+  return async () => {
+    const provider = new firebase.auth.FacebookAuthProvider();
+    provider.addScope("email");
+    provider.addScope("user_birthday");
+    provider.addScope("public_profile");
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((res) => {});
+    try {
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const googleSignup = () => {
+  return async () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope("email");
+    provider.addScope("birthday");
+    provider.addScope("profile");
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((res) => {});
+    try {
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
 export const getUserById = (
   id: string
 ): ThunkAction<void, RootState, null, AuthAction> => {

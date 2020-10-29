@@ -74,13 +74,6 @@ const SignIn: FC = () => {
           <div className='center'>
             <p>
               <img
-                src='/images/ui/btns/login/apple-login.png'
-                alt='Login with Apple'
-                height='60'
-              />
-            </p>
-            <p>
-              <img
                 src='/images/ui/btns/login/facebook-login.png'
                 alt='Login with Facebook'
                 height='60'
