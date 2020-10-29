@@ -61,7 +61,6 @@ export const signup = (
 export const facebookSignup = () => {
   const provider = new firebase.auth.FacebookAuthProvider();
   provider.addScope("email");
-  provider.addScope("user_birthday");
   provider.addScope("public_profile");
   try {
     firebase
@@ -76,7 +75,6 @@ export const facebookSignup = () => {
 export const googleSignup = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope("email");
-  provider.addScope("user.birthday.read");
   provider.addScope("profile");
 
   try {
