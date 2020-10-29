@@ -64,7 +64,7 @@ const App: FC = () => {
           />
           <PublicRoutes path='*' component={Homepage} />
           <PrivateRoutes path='/dashboard' component={Dashboard} exact />
-          <PublicRoutes path='*' component={Dashboard} />
+          <PrivateRoutes path='*' component={Dashboard} />
         </Switch>
         <div className='r-spacer'></div>
         <Footer />
