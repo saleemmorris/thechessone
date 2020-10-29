@@ -119,31 +119,24 @@ const Signup: FC = () => {
           </form>
           <div className='text-center my-15'>or</div>
           <div className='center'>
-            <p>
-              <form
-                className='form'
-                onSubmit={authFacebookProviderSubmitHandler}
-              >
-                <button className='auth-provider' type='submit'>
-                  <img
-                    src='/images/ui/btns/signup/facebook-signup.png'
-                    alt='Login with Facebook'
-                    height='60'
-                  />
-                </button>
-              </form>
-            </p>
-            <p>
-              <form className='form' onSubmit={authGoogleProviderSubmitHandler}>
-                <button className='auth-provider' type='submit'>
-                  <img
-                    src='/images/ui/btns/signup/google-signup.png'
-                    alt='Login with Google'
-                    height='60'
-                  />
-                </button>
-              </form>
-            </p>
+            <form className='form' onSubmit={authFacebookProviderSubmitHandler}>
+              <button className='auth-provider' type='submit'>
+                <img
+                  src='/images/ui/btns/signup/facebook-signup.png'
+                  alt='Login with Facebook'
+                  height='60'
+                />
+              </button>
+            </form>
+            <form className='form' onSubmit={authGoogleProviderSubmitHandler}>
+              <button className='auth-provider' type='submit'>
+                <img
+                  src='/images/ui/btns/signup/google-signup.png'
+                  alt='Login with Google'
+                  height='60'
+                />
+              </button>
+            </form>
             {/* <p>
               <form
                 className='form'
