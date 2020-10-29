@@ -62,7 +62,9 @@ const App: FC = () => {
             component={ForgotPassword}
             exact
           />
+          <PublicRoutes path='*' component={Homepage} />
           <PrivateRoutes path='/dashboard' component={Dashboard} exact />
+          <PublicRoutes path='*' component={Dashboard} />
         </Switch>
         <div className='r-spacer'></div>
         <Footer />

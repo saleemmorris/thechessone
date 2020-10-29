@@ -57,7 +57,13 @@ const Header: FC = () => {
             />
           </div>
         ) : (
-          <Button text='Sign Out' onClick={logoutClickHandler} />
+          <div className='header-right'>
+            <Button
+              className='header btn'
+              text='Sign Out'
+              onClick={logoutClickHandler}
+            />
+          </div>
         )}
       </div>
     </div>

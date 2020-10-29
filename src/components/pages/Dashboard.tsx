@@ -1,6 +1,7 @@
 import React, { FC, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
+import "../../resources/scss/dashboard.scss";
 import Message from "../ui/Message";
 import { setSuccess } from "../../store/actions/authActions";
 import { RootState } from "../../store";
